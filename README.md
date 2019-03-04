@@ -27,3 +27,9 @@ Files to change for your thesis:
 * `body.tex`: the main text of the thesis
 * `appendix.tex`: the optional appendix
 
+
+# Additional notes
+
+| Date | Description |
+| ----- | ---------- |
+| 04.03.2019 | setup latex for vscode |
