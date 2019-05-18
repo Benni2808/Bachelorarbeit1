@@ -1,219 +1,70 @@
 %for reference to this section
 \section{Einleitung}
-\label{section:Introduction}
+\label{section:Introduction} 1350 Wörter
+
 Einleitungstext......
+wird nach Vollendung aller anderen Texte geschrieben, sowie Abstract und Kurzzusammenfassung.
 
 \section{Hintergrund und Angriffsarten von XSS}
-\label{section:History}
+\label{section:History} 1350 Wörter
 
+% genereller Überblick: was ist XXSS und welche Angriffsarten gibt es
+Web Anwendungen sind ein fester Bestandteil, wenn es um online Dienste geht. Im selben Zuge werden aber immer mehr Anfälligkeiten in solchen entdeckt und offengelgt. Aber woher genau kommen diese Anfälligkeiten und wieso werden diese mit solche einer Vorsicht betrachtet, so \textcite{kirda2009}.
+
+Laut \textcite[p.1]{mahmoud2017} ist eine Web Anwendung ein Programm, welches auf einem Server lauft und durch einen Web-Browser kundenseitig abgerufen wird.
+
+\textcite[p.2]{hydara2015} melden, dass diese Sicherheitslücken erstmals in den 1990er, in den frühen Anfängen des World Wide Web, aufgetreten sind. Cross-Site-Scripting gehört zu den ernstzunehmendsten Schwächen wenn es um Web Anwendungen geht. Zu Schaden kommen dabei nicht nur der Source Code oder die Datenbank der Web Anwendung, sondern auch der Nutzer.
+
+Nach \textcite[p.1]{mahmoud2017} ist einen Cross-Site-Scripting Attacke ein schadhafter JavaScript Code, welcher im Web-Browser des Opfers(Nutzer) ausgeführt wird um beispielsweise Zugangsdaten oder Kreditkarteninformationen des jeweiligen Nutzers zu stehlen.
+Der Ablauf um einen solchen Code in die Anwendung injezieren zu können ist immer der Selbe, so \textcite{mahmoud2017}.
+\begin{enumerate}
+	\item Der Angreifer muss eine Schwachstelle in der Anwendung finden um seinen schadhaften Code in die Anwendung zu bringen und somit in weiterem Verlauf sensible Daten von seinem Opfer stehlen zu können.
+	\item Das Opfer besucht die beschädigte Anwendung.
+	\item Die Anwendung sendet eine Anfrage mit dem fehlerhaften Code im Body an einen Server.
+	\item Wenn das Skript im Web-Browser des Opfers ausgeführt wird, kann der Angreifer diverse persönliche Informationen stehlen.
+\end{enumerate}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.75\linewidth]{images/XSS-attack-process.png}
+	\caption{XSS Angriffsprozess}
+\end{figure}
+
+
+
+% Cross-Site-Scripting gibt es in vielen Ausführungen, \textbf{reflected, stored} and \textbf{DOM-based}
+
+% Ab hier genauere Info über Angriffsarten
+\subsection{DOM-basierte Attacken}
+\label{subsection:DOM-based Attacks} 350 Wörter
+
+Die DOM-basierte Attacken
+
+\subsection{stored Attacken}
+\label{subsection:stored attacks} 350 Wörter
+
+
+\subsection{reflected Attacken}
+\label{subsection:reflective attacks} 350 Wörter
+
+
+% Neue Section
 \section{Erkennunng}
-\label{section:Detection}
+\label{section:Detection} 1350 Wörter
+
+Die Erkennung von Angriffen geht einher mit dessen Ausführung.
 
 \subsection{Methode 1}
-\label{subsection:Method1}
+\label{subsection:Method1} 675 Wörter
 
 \subsection{Methode 2}
-\label{subsection:Method2}
+\label{subsection:Method2} 675 Wörter
 
-\section{Verhinderung}
+\section{Verhinderung} 1350 Wörter
 \label{section:Prevention}
 
 \subsection{Methode 1}
-\label{subsection:Method1}
+\label{subsection:Method1} 675 Wörter
 
 \subsection{Methode 2}
-\label{subsection:Method2}
-
-Text mit beliebigen Sonderzeichen in UTF-8 ohne BOM \ldots
-,
-\textbf{hervorgehobener Text},
-\texttt{void}\footnote{Fußnote 1 tatta},
-mathematische Formel im Text $\sum_{i=0}^n i^2$
-\ldots
-
-Referenz auf Unterabschnitt \ref{subsection:Coding} der Arbeit, automatisch richtig nummeriert.
-
-\textcite[]{Mulloni:2010} bringen einen Literaturverweis im laufenden Text.
-
-Literaturverweise sind essentiell für eine wissenschafliche Arbeit. \autocite[]{McConnell:2004:CCS:1096143}.
-
-Achtung: nur zitierte Literatur wird im Literaturverzeichnis
-angeführt.\footnote{Fußnote 2}
-
-
-Wir verwenden \LaTeX\footnote{ \url{http://en.wikibooks.org/wiki/LaTeX}} -- und das
-ist keine Quelle, sondern blos eine URL.
-
-\subsection{Figures machen was sie wollen}
-
-% h = try to place the figure Here
-% t = try to place the figure at the Top of a page
-% p = try to place this figure along with others on a separate Page
-% Note that LaTeX has a sophisticated ranking algorithm to place figures.
-% It is not always easy to accept LaTeX's placing but it is harder doing it
-% manually. Just let it go ;-)
-\begin{figure}[!ht]
-	\centering
-	\subfloat[Das Julia Fraktal]{
-		\includegraphics[width=0.75\linewidth]{images/Julia-Fractal.png}
-		%for reference of this subfigure only
-		\label{subfigure:Julia-Fractal}
-	}
-	\qquad
-	\subfloat[Noise für Tinteneffekte]{
-		\includegraphics[width=0.75\linewidth]{images/Perlin-Coherent.png}
-		%for reference of this subfigure only
-		\label{subfigure:Perlin-Coherent}
-	}
-	\caption[
-		Verschiedene Pixelgraphiken\newline
-		% source url given in the table of figures
-		\small\texttt{https://mediacube.at/wiki/}
-	]{
-		Verschiedene Pixelgraphiken
-	}
-	%for reference to all subfigures
-	\label{figure:PixelImages}
-\end{figure}
-
-Unterstützte Pixelgraphikformate: PNG, JPEG, PDF.
-Angabe von height oder width meist wichtig.
-
-Referenz auf Abbildung \ref{figure:PixelImages} mit allen Teilbildern.
-Referenz auf Unterabbildung \ref{subfigure:Julia-Fractal}.
-
-%figure* stretches figure over both columns
-\begin{figure*}[t]
-	\centering
-	\includegraphics[width=0.9\textwidth]{images/KappaGamma.pdf}
-	\caption{
-		Vektorgraphik mit \LaTeX\ Beschriftung ($\kappa$, $\gamma$)
-	}
-	%for reference to this figure
-	\label{figure:KappaGammaTau}
-\end{figure*}
-
-Referenz auf Abbildung \ref{figure:KappaGammaTau}.
-
-Bei Vektorgraphik mit \LaTeX\ Beschriftung keine Skalierung mit width
-oder height verwenden!
-Vektorgraphik mit \LaTeX\ Beschriftung kann etwa mit \texttt{ipe} erstellt
-werden.
-
-Unterstütztes Vektorgraphikformat: PDF. EPS muss konvertiert werden.
-
-
-\subsection{Unterabschnitt 2}
-%for references to this subsection
-\label{subsection:Coding}
-
-\begin{lstlisting}[
-	label=listing:Main, %for reference to this listing
-	float=h,
-	caption=main.cpp,
-	firstnumber=10
-]
-int main(void) {
-	while (true) {
-	}
-	return 0;
-}
-\end{lstlisting}
-
-Wie man in Listing \ref{listing:Main} in Zeile 10 sieht, kann man die Zeilennummern im Listing absichtlich setzen, hier z.B. auf 10. In Listing \ref{listing:closure} wurde davon nicht Gebrauch gemacht. In diesem Fall beginnt die Nummerierung bei 1.
-
-\begin{lstlisting}[
-    label=listing:closure,
-	float=h,
-	caption=Closure in Javascript,
-	language=JavaScript
-]
-function foo(x,y) {
-    let i = x;
-    return function(a) {
-        return i * 2;
-    }
-}
-\end{lstlisting}
-
-
-\subsubsection{Unterunterabschnitt i}
-
-Wörtliches Zitat:
-%select proper language if not in German
-\selectlanguage{english}
-\begin{quote}
-``Erwin Unruh discovered that templates can be used to compute
-something at compile time. [...] The intriguing part of this exercise, however, was that the production of the prime numbers was performed by the compiler during the compilation process and not at run time.''
-
-\autocite[305]{Bosch2014}
-\end{quote}
-%select German again or the language that you were using before (note ngerman stands for New German)
-%\selectlanguage{ngerman}
-\selectthesislanguage
-
-
-\subsection{Unterabschnitt b}
-
-\begin{enumerate}
-	\item Punkt 1
-	\begin{enumerate}
-		\item Unterpunkt 1
-		\item Unterpunkt 2
-	\end{enumerate}
-	\item Punkt 2
-\end{enumerate}
-
-\begin{itemize}
-	\item Punkt 1
-	\begin{itemize}
-		\item Unterpunkt 1
-		\item Unterpunkt 2
-	\end{itemize}
-	\item Punkt 2
-\end{itemize}
-
-
-\subsection{Unterabschnitt c}
-
-\begin{table}[ht]
-	\centering
-	\begin{tabular}{r|rrr}
-		    & $i$ & $j$ & $k$ \\ \hline
-		$i$ &$-1$ & $k$ &$-j$ \\
-		$j$ &$-k$ &$-1$ & $i$ \\
-		$k$ & $j$ &$-i$ &$-1$
-	\end{tabular}
-	\caption{
-		Multiplikationstabelle für Quaternionen
-	}
-	\label{table:Quaternions}
-\end{table}
-
-Referenz auf Tabelle \ref{table:Quaternions}.
-
-\section{Abschnitt 2}
-\label{section:MathematicalStuff}
-
-Sei $f(x)$ eine stetige Funktion, so ist die \textbf{Fourier Transformierte}
-$F(\omega)$ wie folgt definiert:
-\begin{equation}
-\label{equation:FourierDefinition}
-	F(\omega) = \int_{-\infty}^{\infty} f(x) e^{-i\omega t} dt
-\end{equation}
-
-Referenz auf mathematische Gleichung (\ref{equation:FourierDefinition}).
-
-Unnummerierte Gleichung:
-\begin{equation*}
-	e^{i\varphi} = \cos\varphi + i \sin\varphi
-\end{equation*}
-%you may also use \[ \] instead of \begin{equation*} and \end{equation*}
-
-Gleichungssystem:
-\begin{eqnarray}
-	g(x) = f(x - x_0) & \Leftrightarrow &
-		G(\omega) = F(\omega) e^{-i\omega x_0} \\
-	g(x) = f(x) e^{i\omega_0 x} & \Leftrightarrow &
-		G(\omega) = F(\omega - \omega_0)
-\end{eqnarray}
+\label{subsection:Method2} 675 Wörter
