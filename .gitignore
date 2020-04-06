@@ -27,3 +27,5 @@
 *.lol
 *.run*
 main.pdf
+Versionen_pdf/
+.vscode/
